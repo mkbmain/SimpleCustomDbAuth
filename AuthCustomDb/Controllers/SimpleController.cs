@@ -1,4 +1,5 @@
 using AuthCustomDb.Db;
+using AuthCustomDb.Enums;
 using AuthCustomDb.Token;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http.HttpResults;

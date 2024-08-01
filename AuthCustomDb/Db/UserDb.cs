@@ -1,3 +1,4 @@
+using AuthCustomDb.Enums;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Internal;
 
@@ -48,10 +49,4 @@ public class UserDb : DbContext
             }
         );
     }
-}
-
-public enum Roles
-{
-    Customer = 1,
-    Admin = 2
 }
