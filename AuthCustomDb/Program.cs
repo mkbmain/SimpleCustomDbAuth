@@ -23,7 +23,7 @@ public class Program
         builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection(nameof(JwtSettings)));
         // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
         builder.Services.AddEndpointsApiExplorer();
-        builder.Services.AddDbContext<UserDb>(e=> e.UseSqlite("Data Source=Application.db;"));
+        builder.Services.AddDbContext<UserDb>(e=> e.UseLazyLoadingProxies().UseSqlite("Data Source=Application.db;"));
 
         builder.Services.AddSwaggerGen(c =>
         {
