@@ -32,13 +32,13 @@ public class UserDb : DbContext
     {
         modelBuilder.Entity<User>(w =>
         {
-            w.Property(w => w.Password).HasMaxLength(150);
+            w.Property(e => e.Password).HasMaxLength(150);
             w.Property(e => e.Email).HasMaxLength(150);
         });
 
         modelBuilder.Entity<Role>(w =>
         {
-            w.Property(w => w.Name).HasMaxLength(35);
+            w.Property(e => e.Name).HasMaxLength(35);
             w.HasData(Enum.GetValues<Roles>().Select(q => new Role { Id = (int)q, Name = q.ToString() }));
         });
 
